@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def checked
     post = Post.find(params[:id])
+    # post.checkedはカラム名、カラム名はメソッドとして使用可
     if post.checked 
       post.update(checked: false)
     else
